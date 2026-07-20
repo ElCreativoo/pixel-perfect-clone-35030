@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -96,6 +96,7 @@ function Header() {
 }
 
 function Index() {
+  const ctaVideoRef = useRef<HTMLVideoElement>(null);
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -107,6 +108,24 @@ function Index() {
     );
     document.querySelectorAll(".fade").forEach((el) => observer.observe(el));
     return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const v = ctaVideoRef.current;
+    if (!v) return;
+    v.muted = true;
+    const tryPlay = () => v.play().catch(() => {});
+    tryPlay();
+    const onVisible = () => {
+      if (document.visibilityState === "visible") tryPlay();
+    };
+    const onTouch = () => tryPlay();
+    document.addEventListener("visibilitychange", onVisible);
+    document.addEventListener("touchstart", onTouch, { once: true, passive: true });
+    return () => {
+      document.removeEventListener("visibilitychange", onVisible);
+      document.removeEventListener("touchstart", onTouch);
+    };
   }, []);
 
   return (
@@ -225,11 +244,15 @@ function Index() {
         <div className="max-w-5xl mx-auto px-6">
           <div className="relative rounded-3xl overflow-hidden shadow-glow isolate">
             <video
+              ref={ctaVideoRef}
               className="absolute inset-0 w-full h-full object-cover"
               autoPlay
               loop
               muted
+              defaultMuted
               playsInline
+              // @ts-expect-error legacy iOS attr
+              webkit-playsinline="true"
               preload="auto"
               poster="/images/entrance.jpg"
               aria-hidden="true"
