@@ -85,13 +85,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "geo.placename", content: "Chur" },
       { name: "geo.position", content: "46.850;9.532" },
       { property: "og:title", content: "Coiffeur Saleh Herren – Premium Barber Shop in Chur" },
-      { property: "og:description", content: "Präzision. Charakter. Stil. Coiffeur Saleh Herren in Chur – echter Barber-Handwerk mit höchster Qualität." },
+      { property: "og:description", content: "Coiffeur Saleh Herren in Chur – Premium Herrenhaarschnitte, Skin Fade, Bartdesign, Hot Towel Shave & Grooming. Präzision, Stil und Schweizer Qualität. Jetzt Termin vereinbaren!" },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "de_CH" },
       { property: "og:site_name", content: "Coiffeur Saleh Herren" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Coiffeur Saleh Herren – Premium Barber Shop in Chur" },
-      { name: "twitter:description", content: "Präzision. Charakter. Stil. Coiffeur Saleh Herren in Chur – echter Barber-Handwerk mit höchster Qualität." },
+      { name: "twitter:description", content: "Coiffeur Saleh Herren in Chur – Premium Herrenhaarschnitte, Skin Fade, Bartdesign, Hot Towel Shave & Grooming. Präzision, Stil und Schweizer Qualität. Jetzt Termin vereinbaren!" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2c6a3a3f-5d3a-4d59-bda6-43231ece189f/id-preview-158b58a8--ff49143a-cfd7-4a31-bc2c-7073142b9146.lovable.app-1784566886301.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2c6a3a3f-5d3a-4d59-bda6-43231ece189f/id-preview-158b58a8--ff49143a-cfd7-4a31-bc2c-7073142b9146.lovable.app-1784566886301.png" },
     ],
     links: [
       {
