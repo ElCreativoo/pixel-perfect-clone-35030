@@ -249,10 +249,8 @@ function Index() {
               autoPlay
               loop
               muted
-              defaultMuted
               playsInline
-              // @ts-expect-error legacy iOS attr
-              webkit-playsinline="true"
+              {...({ "webkit-playsinline": "true", "x5-playsinline": "true" } as Record<string, string>)}
               preload="auto"
               poster="/images/entrance.jpg"
               aria-hidden="true"
