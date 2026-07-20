@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
+import logoAsset from "@/assets/coiffeur-saleh-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -334,7 +335,7 @@ function Index() {
       <footer className="py-8 border-t border-white/10" style={{ background: "radial-gradient(circle at 50% 0%, rgba(199,168,107,0.08) 0%, transparent 50%)" }}>
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
           <div>
-            <div className="font-black text-2xl gold">COIFFEUR SALEH</div>
+            <img src={logoAsset.url} alt="Coiffeur Saleh Herren" className="h-16 w-auto" />
             <div className="text-white/50 mt-2">Premium Barber Shop · Chur</div>
           </div>
           <div className="text-white/40 text-sm text-center">© 2026 Coiffeur Saleh Herren · Präzision. Stil. Qualität.</div>
