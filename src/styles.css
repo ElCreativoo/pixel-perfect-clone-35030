@@ -4,6 +4,107 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  --font-sans: Inter, system-ui, sans-serif;
+  --color-gold: #C7A86B;
+  --shadow-glow: 0 0 60px rgba(199, 168, 107, 0.18);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px;
+}
+
+body {
+  font-family: Inter, system-ui, sans-serif;
+  background: #080808;
+  color: white;
+  overflow-x: hidden;
+}
+
+.hero-bg {
+  background:
+    radial-gradient(circle at top left, rgba(199, 168, 107, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.04) 0%, transparent 50%),
+    #080808;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.gold {
+  background: linear-gradient(135deg, #f7e7b3, #c59d46, #fff2cb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.btn {
+  transition: 0.35s;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(197, 157, 70, 0.35);
+}
+
+.card {
+  transition: 0.35s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(197, 157, 70, 0.5);
+}
+
+.fade {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: none;
+}
+
+nav a {
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: #c59d46;
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+header {
+  transition: background 0.3s, border-color 0.3s;
+}
+
+header.scrolled {
+  background: rgba(8, 8, 8, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+.shadow-glow {
+  box-shadow: 0 0 60px rgba(199, 168, 107, 0.18);
+}
+
 /*
  * Design system definition.
  *
