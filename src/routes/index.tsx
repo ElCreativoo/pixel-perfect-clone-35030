@@ -332,11 +332,11 @@ function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 border-t border-white/10" style={{ background: "radial-gradient(circle at 50% 0%, rgba(199,168,107,0.08) 0%, transparent 50%)" }}>
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-          <div>
-            <img src={logoAsset.url} alt="Coiffeur Saleh Herren" className="h-16 w-auto" />
-            <div className="text-white/50 mt-2">Premium Barber Shop · Chur</div>
+      <footer className="py-12 border-t border-white/10" style={{ background: "radial-gradient(circle at 50% 0%, rgba(199,168,107,0.08) 0%, transparent 50%)" }}>
+        <div className="max-w-7xl mx-auto px-6 flex flex-col items-center gap-6">
+          <div className="text-center">
+            <img src={logoAsset.url} alt="Coiffeur Saleh Herren" className="h-32 md:h-44 w-auto mx-auto" />
+            <div className="text-white/50 mt-3 text-sm">Premium Barber Shop · Chur</div>
           </div>
           <div className="text-white/40 text-sm text-center">© 2026 Coiffeur Saleh Herren · Präzision. Stil. Qualität.</div>
           <a href="https://www.instagram.com/coiffeursaleh.chur/" target="_blank" rel="noreferrer" className="text-white/40 hover:text-yellow-300 transition text-sm flex items-center gap-1.5">
